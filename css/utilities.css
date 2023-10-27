@@ -1,0 +1,37 @@
+/* width */
+.w_3r {width: 3rem;}
+.w_6r {width: 6rem;}
+
+/* height */
+
+.h_3r {height: 3rem;}
+
+.h_5r {height: 5rem;}
+
+
+
+
+/* margin */
+
+.mr_0-5r {margin-right: 0.5rem;}
+.mr_1r {margin-right: 1rem;}
+
+
+.mt_5r {margin-top: 5rem;}
+
+.ml_0 {margin-left: 0;}
+
+
+
+
+
+
+
+.debug {min-height: 5rem;}
+
+
+/* backgrounds */
+
+/* text */
+.text_orange {color: orange;}
+
