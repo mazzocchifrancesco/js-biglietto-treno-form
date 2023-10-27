@@ -11,14 +11,14 @@ let btn=document.querySelector("#bottone");
 
 btn.addEventListener("click", function() {
 
-    const etaUtente = Number.parseInt(document.querySelector("#eta").value);
+    const etaUtente = document.querySelector("#etaUtente").value;
     const kmUtente = Number.parseInt(document.querySelector("#km").value);
     
     console.log("età: ", etaUtente);
     console.log("distanza: ", kmUtente);
     
     // check dati validi in ingresso
-    if (isFinite(etaUtente)==false || isFinite(kmUtente)==false) {
+    if (isFinite(kmUtente)==false) {
         document.getElementById("testo").innerHTML = `I valori inseriti non sono accettati`;
     }
     else {
@@ -26,11 +26,11 @@ btn.addEventListener("click", function() {
         
         let price = kmUtente*euroKm;
         
-        if ( etaUtente < 18) {
+        if ( etaUtente == "minorenne") {
             price=(price-(price*underDiscount)).toFixed(2);
         }
         
-        else if (etaUtente >=65) {
+        else if (etaUtente == "over") {
             price=(price-(price*overDiscount)).toFixed(2);
         }
         
