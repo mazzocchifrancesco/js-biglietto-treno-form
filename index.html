@@ -14,37 +14,74 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-main">
 
-    <div id="mainContainer" class="container">
-        <div class="row flex-column">
+    <div id="mainContainer" class="container bg-main p-4">
+        <div class="row flex-column text-white">
             <div class="col-12">
-                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-                <p>Powered by: Ferrovie dello stato</p>
+                <h1 class="fw-bold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                <p class="fw-semibold fst-italic">Powered by: Ferrovie dello stato</p>
 
             </div>
         </div>
-        <!-- input container  -->
+
         <div class="row">
-            <div class="col-6 d-flex flex-column">
-                <h2>Inserisci i tuoi dati</h2>
-                <p>Nome e Cognome</p>
-                <input type="text" class="inputBox" id="nomeUtente" placeholder="Nome e Cognome">
-                <p>La tua fascia di età</p>
+            <div class="col-12">
+                <p id="errorBox" class="min30"></p>
+            </div>
+        </div>
+        <!-- input container  -->
+        <div class="row mt-3 text-white">
+            <div class="col-6 d-flex flex-column gap-3">
+                <h2 class="align-self-center fw-semibold">Inserisci i tuoi dati</h2>
+                <label for="nomeUtente">Nome e cognome</label>
+                <input type="text" id="nomeUtente" class="form-control" placeholder="Nome e Cognome">
                 <label for="eta">La tua fascia di età</label>
-                <select id="etaUtente" name="eta">
+                <select class="form-select" id="etaUtente" name="eta">
+                    <option selected>Seleziona</option>
                     <option value="minorenne">minorenne</option>
                     <option value="maggiorenne">maggiorenne</option>
-                    <option value="over">over65</option>
+                    <option value="over65">over65</option>
                 </select>
-                <p>Chilometri che intendi percorrere</p>
-                <input type="text" class="inputBox" id="km" placeholder="inserisci km">
+                <label for="km">Chilometri che intendi percorrere</label>
+                <input type="number" id="km" class="form-control" placeholder="Inserisci km">
 
-                <button id="bottone">cliccami</button>
+
+                <!-- bottone -->
+                <div class="row justify-content-around">
+                    <button id="crea" class="mt-4 col-5">Crea Biglietto</button>
+                    <button id="cancel" class="mt-4 col-5">Annulla</button>
+                </div>
+
             </div>
             <div class="col-6 d-flex flex-column">
-                <h2>Anteprima Biglietto</h2>
-                <p id="testo"></p>
+                <h2 class="align-self-center fw-semibold">Anteprima Biglietto</h2>
+                <div class="m-3 bg-second rounded p-3 d-flex flex-column gap-1">
+                    <!-- dati anagrafici -->
+                    <h3 class="fw-semibold mb-3">Dati anagrafici</h3>
+                    <p>Nome e cognome</p>
+                    <p id="nomeUtentePrint" class="emptyText"></p>
+                    <p>Fascia di età</p>
+                    <p id="etaPrint" class="emptyText"></p>
+
+                    <!-- dati biglietto -->
+                    <h3 class="fw-semibold my-3">Dati Biglietto</h3>
+                    <p class="min30">Costo biglietto</p>
+                    <p id="costoBiglietto" class="emptyText"></p>
+                    <p>Sconto applicato</p>
+                    <p id="sconto" class="emptyText"></p>
+                    <p>Massima distanza percorribile</p>
+                    <p id="kmPrint" class="emptyText"></p>
+                    <p>Carrozza</p>
+                    <p id="carrozza" class="emptyText"></p>
+                    <p>Codice CP</p>
+                    <p id="cpCode" class="emptyText"></p>
+
+
+
+
+
+                </div>
             </div>
 
         </div>

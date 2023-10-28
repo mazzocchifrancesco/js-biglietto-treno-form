@@ -1,12 +1,24 @@
 
-#bottone {
-    width: 6rem;
-    height: 3rem;
+:root {
+    --main-color: rgb(205, 43, 76);
+    --second-color: rgb(150, 152, 156);
 
 }
 
-#mainContainer {
-    height: 100vh;
-    background-color: lightgray;
+.bg-main { background-color: var(--main-color);}
+.bg-second { background-color: var(--second-color);}
+
+.emptyText {
+    min-height: 30px;
+    background-color: white;
+    width: 15rem;
+    border-radius: 0.3rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
 }
 
+
+body {font-family: sans-serif;}
+p {margin: 0;}
